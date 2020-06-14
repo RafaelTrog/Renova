@@ -1,9 +1,6 @@
-import React, { useEffect, useState, ChangeEvent, FormEvent } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import React, { useEffect, useState, FormEvent } from 'react';
+import { Link } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
-import { Map, TileLayer, Marker } from 'react-leaflet';
-import axios from 'axios';
-import { LeafletMouseEvent } from 'leaflet';
 import api from '../../services/api';
 import './styles.css';
 import logo from '../../assets/logoRenova.png';
