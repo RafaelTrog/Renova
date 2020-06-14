@@ -14,6 +14,7 @@ interface Item {
 }
 
 interface Locales {
+    id: number;
     image: string;
     name: string;
     email: string;
@@ -73,11 +74,11 @@ const SearchPoint = () => {
 
     useEffect(() => {
         axios
-        .get<Locales[]>(`https://localhost:3333/points?city=${selectedCity}&uf=${selectedUf}&items=2`)
+        .get<Locales[]>(`http://localhost:3333/points?city=${selectedCity}&uf=${selectedUf}&items=${selectedItems}`)
         .then(response => {
             setSearchLocales(response.data);
         });
-    }, [setSelectedItems])
+    }, [selectedItems])
 
     
     function handleSelectItem(id: number) {
@@ -116,9 +117,13 @@ const SearchPoint = () => {
             items
         };
 
+        axios
+        .get<Locales[]>(`http://localhost:3333/points?city=${selectedCity}&uf=${selectedUf}&items=${selectedItems}`)
+        .then(response => {
+            setSearchLocales(response.data);
+        });
 
-
-        console.log(setSearchLocales);
+        console.log({locales});
     }
     
     return (
