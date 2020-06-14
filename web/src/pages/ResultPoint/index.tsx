@@ -51,10 +51,11 @@ const ResultPoint = () => {
                     </div>
                 </fieldset>
 
-                <button type="submit">
-                    Nova busca
-                </button>
-
+                <Link to="/search">
+                    <button type="submit">
+                        Nova busca
+                    </button>
+                </Link>
             </form>
 
         </div>

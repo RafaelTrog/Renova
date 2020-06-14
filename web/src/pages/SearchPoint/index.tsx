@@ -44,10 +44,10 @@ const SearchPoint = () => {
     
     return (
     <div id="page-search-point">
-        <div id="navLine"/>
+        <div id="navLine">
         <img id="three" src={three} alt="three"/>
         <header>                             
-            <img src={logo} alt="Ecoleta" />
+            <img src={logo} alt="Renova" />
 
             <Link to ="/">
                 <FiArrowLeft />
@@ -78,6 +78,7 @@ const SearchPoint = () => {
             </fieldset>
             <button type="submit">Pesquisar</button>  
         </form>
+        </div>
     </div>
     );
 };
