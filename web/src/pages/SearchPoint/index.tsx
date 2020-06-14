@@ -4,6 +4,8 @@ import { FiArrowLeft } from 'react-icons/fi';
 import api from '../../services/api';
 import './styles.css';
 import logo from '../../assets/logoRenova.png';
+import three from '../../assets/figura-three.png';
+import nav from '../../assets/nav-bg.png'; 
 
 interface Item {
     id: number;
@@ -39,11 +41,12 @@ const SearchPoint = () => {
         const items = selectedItems;
         console.log('EBAAA DEU CERTO');
     }
-
+    
     return (
     <div id="page-search-point">
-
-        <header>
+        <div id="navLine"/>
+        <img id="three" src={three} alt="three"/>
+        <header>                             
             <img src={logo} alt="Ecoleta" />
 
             <Link to ="/">
@@ -53,7 +56,7 @@ const SearchPoint = () => {
         </header>
         
         <form onSubmit={handleSubmit}>
-            <h1>Busque um ponto de coleta</h1>
+            <h1>Busque um <br/> ponto de coleta</h1>
             <fieldset>
                 <legend>
                     <h2>Ítens de coleta</h2>
@@ -71,10 +74,9 @@ const SearchPoint = () => {
                             <span>{item.title}</span>
                             </li>
                         ))}
-                    </ul>
-
-                    <button type="submit">Pesquisar</button>
+                    </ul>                                      
             </fieldset>
+            <button type="submit">Pesquisar</button>  
         </form>
     </div>
     );
