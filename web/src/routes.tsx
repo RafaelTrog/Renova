@@ -10,8 +10,8 @@ const Routes = () => {
     return (
         <BrowserRouter>
             <Route component={Home} path="/" exact/>
-            <Route component={CreatePoint} path="/create-point" />
-            <Route component={SearchPoint} path="/search-point" />
+            <Route component={CreatePoint} path="/create" />
+            <Route component={SearchPoint} path="/search" />
             <Route component={ResultPoint} path="/results" />
         </BrowserRouter>
     );

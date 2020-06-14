@@ -11,21 +11,21 @@ const Home = () => {
         <div id="page-home">
             <div className="content">
                 <header>
-                    <img src={logo} alt="Ecoleta"/>
+                    <img src={logo} alt="Renova"/>
                 </header>
                 
                 <main>
                     <h1>Seu marketplace de coleta de resíduos.</h1>
                     <p>Ajudamos as pessoas a encontrarem pontos de coleta de forma eficiente.</p>
 
-                    <Link className="addBtn" to="/create-point">
+                    <Link to="/create">
                         <span>
                         <FiEdit />
                         </span>
                         <strong>Cadastre um ponto de coleta</strong>
                     </Link>
 
-                    <Link to="/search-point">
+                    <Link to="/search">
                         <span>
                         <FiSearch />
                         </span>

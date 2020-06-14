@@ -38,14 +38,6 @@
     margin-top: 24px;
     line-height: 38px;
   }
-  
-  #page-home .content main .addBtn {
-    background: var(--second-color);
-  }
-
-  #page-home .content main .addBtn:hover {
-    background: #090909;
-  }
 
   #page-home .content main a {
     width: 100%;
@@ -87,7 +79,7 @@
   }
   
   #page-home .content main a:hover {
-    background: rgb(26, 26, 26);
+    background: var(--secondary-color);
   }
   
   @media(max-width: 900px) {

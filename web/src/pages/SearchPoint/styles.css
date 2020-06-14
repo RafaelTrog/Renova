@@ -179,7 +179,7 @@
   }
   
   #page-search-point form button:hover {
-    background: #2FB86E;
+    background: var(--secondary-color);
   }
   
   .items-grid {

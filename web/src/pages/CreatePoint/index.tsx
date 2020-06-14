@@ -148,6 +148,7 @@ const CreatePoint = () => {
     return (
         <div id="page-create-point">
             <header>
+                <div id="navLine"/>
                 <img src={logo} alt="Ecoleta" />
 
                 <Link to ="/">
