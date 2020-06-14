@@ -1,15 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 24.1.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Camada_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#409B70;}
-	.st1{fill:none;stroke:#322153;stroke-width:2;}
-	.st2{fill:none;stroke:#322153;stroke-width:2;stroke-linejoin:round;}
-</style>
-<rect x="8" y="7" class="st0" width="48" height="24"/>
-<path class="st1" d="M55,5v54c0,2.2-1.8,4-4,4H13c-2.2,0-4-1.8-4-4V5c0-2.2,1.8-4,4-4h38C53.2,1,55,2.8,55,5z"/>
-<line class="st2" x1="15" y1="37" x2="33" y2="37"/>
-<line class="st2" x1="15" y1="42" x2="33" y2="42"/>
-<line class="st2" x1="15" y1="47" x2="33" y2="47"/>
-</svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 64 64" width="64" height="64"><defs><path d="M56 7C56 7 56 7 56 7C56 21.4 56 29.4 56 31C56 31 56 31 56 31C27.2 31 11.2 31 8 31C8 31 8 31 8 31C8 16.6 8 8.6 8 7C8 7 8 7 8 7C36.8 7 52.8 7 56 7Z" id="a1gvICoAG2"></path><path d="M55 59C55 61.67 53.67 63 51 63C28.2 63 15.53 63 13 63C10.33 63 9 61.67 9 59C9 26.6 9 8.6 9 5C9 2.33 10.33 1 13 1C35.8 1 48.47 1 51 1C53.67 1 55 2.33 55 5C55 37.4 55 55.4 55 59Z" id="a4MZ3CkDu"></path><path d="M15 37L33 37" id="coAf7KFQ"></path><path d="M15 42L33 42" id="b2qGYYRNgl"></path><path d="M15 47L33 47" id="esTI5hBpg"></path></defs><g><g><g><use xlink:href="#a1gvICoAG2" opacity="1" fill="#409b70" fill-opacity="1"></use><g><use xlink:href="#a1gvICoAG2" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use></g></g><g><use xlink:href="#a4MZ3CkDu" opacity="1" fill="#000000" fill-opacity="0"></use><g><use xlink:href="#a4MZ3CkDu" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="2" stroke-opacity="1"></use></g></g><g><use xlink:href="#coAf7KFQ" opacity="1" fill="#000000" fill-opacity="0"></use><g><use xlink:href="#coAf7KFQ" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="2" stroke-opacity="1"></use></g></g><g><use xlink:href="#b2qGYYRNgl" opacity="1" fill="#000000" fill-opacity="0"></use><g><use xlink:href="#b2qGYYRNgl" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="2" stroke-opacity="1"></use></g></g><g><use xlink:href="#esTI5hBpg" opacity="1" fill="#000000" fill-opacity="0"></use><g><use xlink:href="#esTI5hBpg" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="2" stroke-opacity="1"></use></g></g></g></g></svg>
