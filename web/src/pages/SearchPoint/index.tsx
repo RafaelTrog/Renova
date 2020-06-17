@@ -35,9 +35,7 @@ interface IBGECityResponse {
 const SearchPoint = () => {
     const [items, setItems] = useState<Item[]>([]);
     const [selectedItems, setSelectedItems] = useState<number[]>([]);
-
-    const [locales, setSearchLocales] = useState<Locales[]>([]);
-    
+    const [locales, setSearchLocales] = useState<Locales[]>([]);    
     const [ufs, setUfs] = useState<string[]>([]);
     const [cities, setCities] = useState<string[]>([]);
     const [selectedUf, setSelectedUf] = useState('0');
@@ -73,12 +71,11 @@ const SearchPoint = () => {
 
     useEffect(() => {
         axios
-        .get<Locales[]>(`https://localhost:3333/points?city=${selectedCity}&uf=${selectedUf}&items=2`)
+        .get<Locales[]>(`https://localhost:3333/points?city=${selectedCity}&uf=${selectedUf}&items=${selectedItems}`)
         .then(response => {
             setSearchLocales(response.data);
         });
     }, [setSelectedItems])
-
     
     function handleSelectItem(id: number) {
         const alreadySelected = selectedItems.findIndex(item => item === id);
@@ -115,12 +112,8 @@ const SearchPoint = () => {
             city,
             items
         };
-
-
-
-        console.log(setSearchLocales);
     }
-    
+
     return (
     <div id="page-search-point">
         <div id="navLine">
@@ -195,8 +188,14 @@ const SearchPoint = () => {
                     </ul>                                      
             </fieldset>
 
+            {/* if(setSearchLocales === true ){
+                //submit -> results 
+            }else{
+                //alert: selecione algum parametro
+            } */}
+
             <button type="submit">
-                Pesquisar
+                <Link to="/results">Pequisar</Link>                
             </button>  
         </form>
         </div>
