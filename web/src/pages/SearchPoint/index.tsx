@@ -1,11 +1,13 @@
 import React, { useEffect, useState, FormEvent, ChangeEvent } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
 import axios from 'axios';
 import api from '../../services/api';
 import './styles.css';
 import logo from '../../assets/logoRenova.png';
 import three from '../../assets/figura-three.png';
+
+import ResultPoint from '../ResultPoint'
 
 interface Item {
     id: number;
@@ -43,6 +45,8 @@ const SearchPoint = () => {
     const [cities, setCities] = useState<string[]>([]);
     const [selectedUf, setSelectedUf] = useState('0');
     const [selectedCity, setSelectedCity] = useState('0');
+
+    const history = useHistory();
 
     useEffect(() => {
         api.get('items').then(response => {
@@ -117,17 +121,22 @@ const SearchPoint = () => {
             items
         };
 
-        axios
-        .get<Locales[]>(`http://localhost:3333/points?city=${selectedCity}&uf=${selectedUf}&items=${selectedItems}`)
-        .then(response => {
-            setSearchLocales(response.data);
-        });
+        if(selectedItems && selectedUf && selectedCity) {
+            localStorage.setItem('items', String(selectedItems));
+            localStorage.setItem('uf', selectedUf);
+            localStorage.setItem('city', selectedCity);
+        }else {
+            alert('Complete as informações para buscar!')
+        }
 
-        console.log({locales});
+        history.push('/results');
+
     }
     
     return (
+
     <div id="page-search-point">
+
         <div id="navLine"/>
         <img id="three" src={three} alt="three"/>
         <header>                             
@@ -200,9 +209,9 @@ const SearchPoint = () => {
                     </ul>                                      
             </fieldset>
 
-            <button type="submit">
-                Pesquisar
-            </button>  
+                <button type="submit">
+                    Buscar
+                </button>
         </form>
     </div>
     );
