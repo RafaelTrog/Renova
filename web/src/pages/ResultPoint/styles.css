@@ -90,6 +90,28 @@
       margin: 0 20px;
   }
 
+  #page-result-point form fieldset .items .imageLocal {
+    width: 144px;
+    height: 144px;
+    overflow: hidden;
+    border-radius: 9px;
+  }
+
+  #page-result-point form fieldset .items .imageLocal img {
+    width: 144px;
+    height: 144px;
+  }
+
+  #page-result-point form fieldset .mapItem {
+    height: 0px;
+    overflow: hidden;
+    transition: all 0.3s linear;
+  }
+
+  .showMap {
+    height: 350px;
+  }
+
   #page-result-point form fieldset .items .items-coleta {
       display: flex;
       flex-wrap: wrap;

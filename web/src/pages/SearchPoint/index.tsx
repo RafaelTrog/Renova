@@ -1,11 +1,13 @@
 import React, { useEffect, useState, FormEvent, ChangeEvent } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
 import axios from 'axios';
 import api from '../../services/api';
 import './styles.css';
 import logo from '../../assets/logoRenova.png';
 import three from '../../assets/figura-three.png';
+
+import ResultPoint from '../ResultPoint'
 
 interface Item {
     id: number;
@@ -14,6 +16,7 @@ interface Item {
 }
 
 interface Locales {
+    id: number;
     image: string;
     name: string;
     email: string;
@@ -40,6 +43,8 @@ const SearchPoint = () => {
     const [cities, setCities] = useState<string[]>([]);
     const [selectedUf, setSelectedUf] = useState('0');
     const [selectedCity, setSelectedCity] = useState('0');
+
+    const history = useHistory();
 
     useEffect(() => {
         api.get('items').then(response => {
@@ -71,11 +76,20 @@ const SearchPoint = () => {
 
     useEffect(() => {
         axios
+<<<<<<< HEAD
         .get<Locales[]>(`https://localhost:3333/points?city=${selectedCity}&uf=${selectedUf}&items=${selectedItems}`)
         .then(response => {
             setSearchLocales(response.data);
         });
     }, [setSelectedItems])
+=======
+        .get<Locales[]>(`http://localhost:3333/points?city=${selectedCity}&uf=${selectedUf}&items=${selectedItems}`)
+        .then(response => {
+            setSearchLocales(response.data);
+        });
+    }, [selectedItems])
+
+>>>>>>> 88fab0b00c6522575a5138c51b030f0eaeb68f24
     
     function handleSelectItem(id: number) {
         const alreadySelected = selectedItems.findIndex(item => item === id);
@@ -112,11 +126,31 @@ const SearchPoint = () => {
             city,
             items
         };
+<<<<<<< HEAD
+=======
+
+        if(selectedItems && selectedUf && selectedCity) {
+            localStorage.setItem('items', String(selectedItems));
+            localStorage.setItem('uf', selectedUf);
+            localStorage.setItem('city', selectedCity);
+        }else {
+            alert('Complete as informações para buscar!')
+        }
+
+        history.push('/results');
+
+>>>>>>> 88fab0b00c6522575a5138c51b030f0eaeb68f24
     }
 
     return (
+
     <div id="page-search-point">
+<<<<<<< HEAD
         <div id="navLine">
+=======
+
+        <div id="navLine"/>
+>>>>>>> 88fab0b00c6522575a5138c51b030f0eaeb68f24
         <img id="three" src={three} alt="three"/>
         <header>                             
             <img src={logo} alt="Renova" />
@@ -188,6 +222,7 @@ const SearchPoint = () => {
                     </ul>                                      
             </fieldset>
 
+<<<<<<< HEAD
             {/* if(setSearchLocales === true ){
                 //submit -> results 
             }else{
@@ -197,6 +232,11 @@ const SearchPoint = () => {
             <button type="submit">
                 <Link to="/results">Pequisar</Link>                
             </button>  
+=======
+                <button type="submit">
+                    Buscar
+                </button>
+>>>>>>> 88fab0b00c6522575a5138c51b030f0eaeb68f24
         </form>
         </div>
     </div>
