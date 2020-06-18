@@ -138,7 +138,9 @@ const SearchPoint = () => {
     <div id="page-search-point">
 
         <div id="navLine"/>
-        <img id="three" src={three} alt="three"/>
+
+        <div id="figure"/>
+
         <header>                             
             <img src={logo} alt="Ecoleta" />
 

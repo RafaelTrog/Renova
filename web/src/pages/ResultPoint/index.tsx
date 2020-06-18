@@ -62,6 +62,20 @@ const ResultPoint = () => {
 
     }, []);
 
+    function showMapClick(id: String) {
+        const map = document.querySelector('#map' + id);
+        console.log(id);
+        console.log(map);
+        if (map) {
+            map.classList.toggle('showMap');
+        }
+    };
+
+    function handleSubmit(event: FormEvent) {
+        event.preventDefault();
+        history.push('/search');
+    };
+
     return (
 
         <div id="page-result-point">
@@ -79,7 +93,7 @@ const ResultPoint = () => {
                 </Link>
             </header>
 
-            <form>
+            <form onSubmit={handleSubmit}>
 
                 <h1>Resultados <br/> da busca</h1>
 
@@ -92,7 +106,8 @@ const ResultPoint = () => {
                                 <p><FaWhatsapp/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{id.whatsapp}</p>
                                 <p><FiMail />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{id.email}</p>
                                 <p><FiMapPin />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{id.city}, {id.uf} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-                                <p id={`ver${id.id}`}><strong>ver no mapa</strong></p>
+                                <p onClick={() => showMapClick(String(id.id))}><strong>ver no mapa</strong></p>
+                                {/* <button type="button" className="verMapa" onClick={() => showMapClick(String(id.id))}><strong>ver no mapa</strong></button> */}
                             </div>
                             <div>
                                 <p><FiGrid />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ítens</p>
@@ -117,11 +132,9 @@ const ResultPoint = () => {
                     </fieldset>
                 ))}
 
-                <Link to="/search">
-                    <button type="submit">
-                        Nova busca
-                    </button>
-                </Link>
+                <button type="submit">
+                    Nova busca
+                </button>
 
             </form>
 

@@ -145,8 +145,6 @@ const CreatePoint = () => {
         history.push('/');
     }
 
-    alert('contando');
-
     return (
         <div id="page-create-point">
             <header>
