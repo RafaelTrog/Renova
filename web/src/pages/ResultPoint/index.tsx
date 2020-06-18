@@ -9,12 +9,7 @@ import axios from 'axios';
 
 import './styles.css';
 import logo from '../../assets/logoRenova.png';
-import frameImg from '../../assets/frame-img.png';
 import frameItem from '../../assets/frame-item.png';
-
-interface ResultPointProps {
-    searchURL: String;
-};
 
 interface Locales {
     id: number;
@@ -64,8 +59,16 @@ const ResultPoint = () => {
 
     function showMapClick(id: String) {
         const map = document.querySelector('#map' + id);
-        console.log(id);
-        console.log(map);
+        const btn = document.querySelector('#ver' + id);
+
+        if(btn) {
+            if (btn.textContent != 'ocultar mapa'){
+                btn.textContent = 'ocultar mapa';
+            }else {
+                btn.textContent = 'ver no mapa';
+            };
+        }
+
         if (map) {
             map.classList.toggle('showMap');
         }
@@ -106,10 +109,9 @@ const ResultPoint = () => {
                                 <p><FaWhatsapp/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{id.whatsapp}</p>
                                 <p><FiMail />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{id.email}</p>
                                 <p><FiMapPin />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{id.city}, {id.uf} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-                                <p onClick={() => showMapClick(String(id.id))}><strong>ver no mapa</strong></p>
-                                {/* <button type="button" className="verMapa" onClick={() => showMapClick(String(id.id))}><strong>ver no mapa</strong></button> */}
+                                <p id={`ver${id.id}`} className="verMapa" onClick={() => showMapClick(String(id.id))}>ver no mapa</p>
                             </div>
-                            <div>
+                            <div className="itensColeta">
                                 <p><FiGrid />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ítens</p>
                                 <div className="items-coleta">
                                 <img src={frameItem} alt="Item"/>
