@@ -9,12 +9,7 @@ import axios from 'axios';
 
 import './styles.css';
 import logo from '../../assets/logoRenova.png';
-import frameImg from '../../assets/frame-img.png';
 import frameItem from '../../assets/frame-item.png';
-
-interface ResultPointProps {
-    searchURL: String;
-};
 
 interface Locales {
     id: number;
@@ -62,6 +57,28 @@ const ResultPoint = () => {
 
     }, []);
 
+    function showMapClick(id: String) {
+        const map = document.querySelector('#map' + id);
+        const btn = document.querySelector('#ver' + id);
+
+        if(btn) {
+            if (btn.textContent != 'ocultar mapa'){
+                btn.textContent = 'ocultar mapa';
+            }else {
+                btn.textContent = 'ver no mapa';
+            };
+        }
+
+        if (map) {
+            map.classList.toggle('showMap');
+        }
+    };
+
+    function handleSubmit(event: FormEvent) {
+        event.preventDefault();
+        history.push('/search');
+    };
+
     return (
 
         <div id="page-result-point">
@@ -79,7 +96,7 @@ const ResultPoint = () => {
                 </Link>
             </header>
 
-            <form>
+            <form onSubmit={handleSubmit}>
 
                 <h1>Resultados <br/> da busca</h1>
 
@@ -92,9 +109,9 @@ const ResultPoint = () => {
                                 <p><FaWhatsapp/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{id.whatsapp}</p>
                                 <p><FiMail />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{id.email}</p>
                                 <p><FiMapPin />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{id.city}, {id.uf} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-                                <p id={`ver${id.id}`}><strong>ver no mapa</strong></p>
+                                <p id={`ver${id.id}`} className="verMapa" onClick={() => showMapClick(String(id.id))}>ver no mapa</p>
                             </div>
-                            <div>
+                            <div className="itensColeta">
                                 <p><FiGrid />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ítens</p>
                                 <div className="items-coleta">
                                 <img src={frameItem} alt="Item"/>
@@ -119,6 +136,7 @@ const ResultPoint = () => {
                     </fieldset>
                 ))}
 
+<<<<<<< HEAD
 >>>>>>> 88fab0b00c6522575a5138c51b030f0eaeb68f24
                 <Link to="/search">
                     <button type="submit">
@@ -127,6 +145,11 @@ const ResultPoint = () => {
                 </Link>
 <<<<<<< HEAD
 =======
+=======
+                <button type="submit">
+                    Nova busca
+                </button>
+>>>>>>> 529eca87f151dd2dd4f9a480286760d26955df62
 
 >>>>>>> 88fab0b00c6522575a5138c51b030f0eaeb68f24
             </form>

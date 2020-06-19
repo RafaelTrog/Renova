@@ -17,15 +17,15 @@
   }
 
   #page-result-point #figure {
-    background-image: url('../../assets/figure-two.png');
+    background-image: url('../../assets/figura-three.png');
     background-size: 300px;
     background-repeat: no-repeat;
-    position: absolute;
+    position: fixed;
     width: 300px;
     height: 367px;
-    left: 0;
-    bottom: 0;
-    z-index: -999;
+    right: 0;
+    bottom: -60px;
+    z-index: -9999;
   }
   
   #page-result-point header {
@@ -76,7 +76,13 @@
   #page-result-point form fieldset .items {
       display: flex;
       margin-bottom: 20px;
+      position: relative;
   }
+
+  #page-result-point form fieldset .items .itensColeta {
+    position: absolute;
+    right: 0;
+}
 
   #page-result-point form fieldset .items svg {
     height: 24px;
@@ -105,11 +111,23 @@
   #page-result-point form fieldset .mapItem {
     height: 0px;
     overflow: hidden;
-    transition: all 0.3s linear;
+    transition: all 0.1s linear;
+    margin-bottom: 0;
+  }
+
+  .verMapa {
+    cursor: pointer;
+    font-size: 10pt;
+    color: var(--primary-color);
+    user-select: none;
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+    bottom: 0;
   }
 
   .showMap {
-    height: 350px;
+    height: 350px !important;
   }
 
   #page-result-point form fieldset .items .items-coleta {

@@ -150,8 +150,14 @@ const SearchPoint = () => {
 =======
 
         <div id="navLine"/>
+<<<<<<< HEAD
 >>>>>>> 88fab0b00c6522575a5138c51b030f0eaeb68f24
         <img id="three" src={three} alt="three"/>
+=======
+
+        <div id="figure"/>
+
+>>>>>>> 529eca87f151dd2dd4f9a480286760d26955df62
         <header>                             
             <img src={logo} alt="Renova" />
 
