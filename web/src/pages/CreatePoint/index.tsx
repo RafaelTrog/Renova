@@ -149,7 +149,7 @@ const CreatePoint = () => {
         <div id="page-create-point">
             <header>
                 <div id="navLine"/>
-                <img src={logo} alt="Ecoleta" />
+                <img src={logo} alt="Renova" />
 
                 <Link to ="/">
                     <FiArrowLeft />

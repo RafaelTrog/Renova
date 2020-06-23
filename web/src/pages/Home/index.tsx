@@ -15,8 +15,8 @@ const Home = () => {
                 </header>
                 
                 <main>
-                    <h1>Seu marketplace de coleta de resíduos.</h1>
-                    <p>Ajudamos as pessoas a encontrarem pontos de coleta de forma eficiente.</p>
+                    <h1>Onde o fim é um começo.</h1>
+                    <p>Ajudamos a busca por materiais recicláveis de forma simples e eficaz.</p>
 
                     <Link to="/create">
                         <span>

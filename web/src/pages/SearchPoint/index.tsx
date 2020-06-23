@@ -142,7 +142,7 @@ const SearchPoint = () => {
         <div id="figure"/>
 
         <header>                             
-            <img src={logo} alt="Ecoleta" />
+            <img src={logo} alt="Renova" />
 
             <Link to ="/">
                 <FiArrowLeft />
